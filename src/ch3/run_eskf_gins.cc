@@ -20,9 +20,9 @@ DEFINE_double(antenna_pox_y, -0.20, "RTK天线安装偏移Y");
 DEFINE_bool(with_ui, true, "是否显示图形界面");
 DEFINE_bool(with_odom, false, "是否加入轮速计信息");
 
-/**
- * 本程序演示使用RTK+IMU进行组合导航
- */
+/*
+    * 本程序演示使用RTK+IMU进行组合导航
+*/
 int main(int argc, char** argv) {
     google::InitGoogleLogging(argv[0]);
     FLAGS_stderrthreshold = google::INFO;

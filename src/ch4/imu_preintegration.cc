@@ -55,12 +55,7 @@ void IMUPreintegration::Integrate(const IMU &imu, double dt) {
     A.block<3, 3>(0, 0) = deltaR.matrix().transpose();
     B.block<3, 3>(0, 0) = rightJ * dt;
 
-    // 更新噪声项
-    cov_ = A * cov_ * A.transpose() + B * noise_gyro_acce_ * B.transpose();
-
-    // 更新dR_dbg
-    dR_dbg_ = deltaR.matrix().transpose() * dR_dbg_ - rightJ * dt;  // (4.39a)
-
+    // 更新噪声项source
     // 增量积分时间
     dt_ += dt;
 }

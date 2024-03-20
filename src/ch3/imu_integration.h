@@ -45,7 +45,7 @@ class IMUIntegration {
     SO3 R_;
     Vec3d v_ = Vec3d::Zero();
     Vec3d p_ = Vec3d::Zero();
-
+    
     double timestamp_ = 0.0;
 
     // 零偏，由外部设定
